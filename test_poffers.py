@@ -46,5 +46,22 @@ def test_post_poffers_ride():
     print(req.json())
     print(objects)
 
+
+def test_insurable_check():
+    objects = []
+    dop_url = 'vehicle/insurable'
+    headers = {'Authorization': const.auth, 'Content-Type': 'application/json'}
+
+    json = json_data.json_car
+    req = requests.post(const.base_url + const.poffers + dop_url,
+                        headers=headers,
+                        json=json)
+    objects.append(req)
+
+    assert 200 == req.status_code
+    print(req.json())
+    print(objects)
+
+
 if __name__ == '__main__':
-    test_post_poffers_ride()
+    test_insurable_check()

@@ -19,3 +19,9 @@ json_ride = {
     ]
 }
 
+json_car = {
+    "make": "Audi",
+    "model": "A1",
+    "age": 1
+}
+
