@@ -1,4 +1,5 @@
 import const
+import json_data
 import requests
 
 
@@ -34,11 +35,12 @@ def test_post_poffers_ride():
     objects = []
     dop_url = 'ride'
     headers = {'Authorization': const.auth, 'Content-Type': 'application/json'}
-    # body = {json}
 
-    req = requests.post(const.base_url + const.poffers + dop_url, headers=headers)
+    json = json_data.json_ride
+    req = requests.post(const.base_url + const.poffers + dop_url,
+                        headers=headers,
+                        json=json)
     objects.append(req)
-    req.json()
 
     assert 200 == req.status_code
     print(req.json())

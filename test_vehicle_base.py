@@ -19,7 +19,7 @@ def test_get_vehiclesbase_models():
     objects = []
     options = "models/10"
 
-    req = requests.get(const.base_urlurl + const.vehiclesbase + options)
+    req = requests.get(const.base_url + const.vehiclesbase + options)
     objects.append(req)
 
     assert 200 == req.status_code

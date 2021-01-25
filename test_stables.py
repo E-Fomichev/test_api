@@ -9,11 +9,11 @@ def test_get_stables():
     number = ("Н504АР799")
     headers = {'Authorization': const.auth}
 
-    req = requests.get(const.base_urlurl + const.stables + number, headers=headers)
+    req = requests.get(const.base_url + const.stables + number, headers=headers)
     objects.append(req)
     req.json()
     time.sleep(5)
-    req = requests.get(const.base_urlurl + const.stables + number, headers=headers)
+    req = requests.get(const.base_url + const.stables + number, headers=headers)
 
     assert 200 == req.status_code
     print(req.json())
