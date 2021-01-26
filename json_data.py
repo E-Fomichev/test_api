@@ -2,7 +2,7 @@ import const
 
 
 json_ride = {
-    "vehicle_id": const.id_car,
+    "vehicle_id": const.vid,
     "points": [
         {
             "lon": "30.285109",

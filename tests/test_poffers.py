@@ -6,10 +6,10 @@ import requests
 def test_get_poffers_parking():
     objects = []
     dop_url = 'parking'
-    params = {'vid': const.id_car, 'lifetime': '60', 'type': 'garage', 'lat': '11.1', 'lon': '12.2'}
+    params = {'vid': const.vid, 'lifetime': '60', 'type': 'garage', 'lat': '11.1', 'lon': '12.2'}
     headers = {'Authorization': const.auth}
 
-    req = requests.get(const.base_url + const.poffers + dop_url, headers=headers, params=params)
+    req = requests.get(const.base_url + const.poffers + const.uid + '/' + dop_url, headers=headers, params=params)
     objects.append(req)
     req.json()
 
@@ -20,10 +20,10 @@ def test_get_poffers_parking():
 def test_get_poffers_package():
     objects = []
     dop_url = 'package'
-    params = {'vid': const.id_car, 'dist': '100', 'dist_units': 'km', 'shared': 'true'}
+    params = {'vid': const.vid, 'dist': '100', 'dist_units': 'km', 'shared': 'true'}
     headers = {'Authorization': const.auth}
 
-    req = requests.get(const.base_url + const.poffers + dop_url, headers=headers, params=params)
+    req = requests.get(const.base_url + const.poffers + const.uid + '/' + dop_url, headers=headers, params=params)
     objects.append(req)
     req.json()
 
@@ -37,7 +37,7 @@ def test_post_poffers_ride():
     headers = {'Authorization': const.auth, 'Content-Type': 'application/json'}
 
     json = json_data.json_ride
-    req = requests.post(const.base_url + const.poffers + dop_url,
+    req = requests.post(const.base_url + const.poffers + const.uid + '/' + dop_url,
                         headers=headers,
                         json=json)
     objects.append(req)
@@ -53,7 +53,7 @@ def test_insurable_check():
     headers = {'Authorization': const.auth, 'Content-Type': 'application/json'}
 
     json = json_data.json_car
-    req = requests.post(const.base_url + const.poffers + dop_url,
+    req = requests.post(const.base_url + const.poffers + const.uid + '/' + dop_url,
                         headers=headers,
                         json=json)
     objects.append(req)
