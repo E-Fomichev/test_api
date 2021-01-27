@@ -25,3 +25,12 @@ json_car = {
     "age": 1
 }
 
+json_odometr = {
+    "mileage_unit": 100,
+    "mileage_value": "miles",
+    "image": {
+        "collection": "ea sunt commodo",
+        "key": "veniam in aliquip incididunt"
+    }
+}
+

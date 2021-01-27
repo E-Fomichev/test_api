@@ -9,7 +9,9 @@ def test_get_poffers_parking():
     params = {'vid': const.vid, 'lifetime': '60', 'type': 'garage', 'lat': '11.1', 'lon': '12.2'}
     headers = {'Authorization': const.auth}
 
-    req = requests.get(const.base_url + const.poffers + const.uid + '/' + dop_url, headers=headers, params=params)
+    req = requests.get(const.base_url + const.poffers + const.uid + '/' + dop_url,
+                       headers=headers,
+                       params=params)
     objects.append(req)
     req.json()
 
@@ -23,7 +25,9 @@ def test_get_poffers_package():
     params = {'vid': const.vid, 'dist': '100', 'dist_units': 'km', 'shared': 'true'}
     headers = {'Authorization': const.auth}
 
-    req = requests.get(const.base_url + const.poffers + const.uid + '/' + dop_url, headers=headers, params=params)
+    req = requests.get(const.base_url + const.poffers + const.uid + '/' + dop_url,
+                       headers=headers,
+                       params=params)
     objects.append(req)
     req.json()
 

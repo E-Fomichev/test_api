@@ -2,7 +2,6 @@ import requests
 import const
 import time
 
-# python get_token.py -u +79000000001 -p Password_1122 --stage fd-dev
 
 def test_get_stables():
     objects = []
