@@ -34,3 +34,10 @@ json_odometr = {
     }
 }
 
+json_report = {
+    "composite_report_id": "<integer>",
+    "result": "<object>",
+    "trip_id": "<integer>",
+    "model_id": "<integer>",
+    "id": "<integer>"
+}
