@@ -41,3 +41,9 @@ json_report = {
     "model_id": "<integer>",
     "id": "<integer>"
 }
+
+json_create_car = {
+    "name": "4 серия",
+    "id": 19775,
+    "description": "4 серия"
+}
