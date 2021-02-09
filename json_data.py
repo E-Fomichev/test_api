@@ -84,6 +84,7 @@ json_migration = {
     "corps": "mollit quis anim",
     "apartment": "sit sunt tempor dolor elit"
 }
+
 json_blacklist = {
     "birth": "01.01.2000",
     "last_name": "mollit non id sit",
@@ -99,4 +100,28 @@ json_blacklist = {
     "city": "ut aute",
     "building": "do adipisicing velit in",
     "apartment": "eiusmod ut magna eni"
+}
+
+json_shared_person = {
+    "comment": "magna cillum id mollit",
+    "uid": const.shared_person
+}
+
+json_odometer = {
+    "mileage_unit": "km",
+    "mileage_value": 10001,
+    "image": {
+        "collection": "do labore esse",
+        "key": "exercitation nulla nostrud"
+    }
+}
+
+json_auto_details = {
+    "year": 2014,
+    "plate": {
+        "value": "в666ор77",
+        "type": "russia93"
+    },
+    "model": "Kalina",
+    "make": "Lada"
 }
