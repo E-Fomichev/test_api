@@ -47,3 +47,56 @@ json_create_car = {
     "id": 19775,
     "description": "4 серия"
 }
+
+json_update_car = {
+    "name": "4 серия",
+    "id": 19775,
+    "description": "Четвертая серия"
+}
+
+json_wanted_criminal = {
+    "birth": "01.01.2002",
+    "last_name": "cupidatat culpa in",
+    "first_name": "ea sunt officia voluptate in",
+    "patronymic": "sit enim laboris eu dolor"
+}
+
+json_licence = {
+    "driver_licence": const.driver_licence
+}
+
+json_ownership = {
+    "birth": "02.04.1989",
+    "last_name": "Фомичев",
+    "first_name": "Евгений",
+    "patronymic": "Геннадьевич",
+    "passport": "6308 301390",
+    "driver_licence": "6415121021"
+}
+
+json_migration = {
+    "street": "ex amet in",
+    "city": "Ut sunt do",
+    "passport_date": "01.01.2000",
+    "passport": "1234 123412",
+    "house": "e",
+    "district": "amet ea sint",
+    "corps": "mollit quis anim",
+    "apartment": "sit sunt tempor dolor elit"
+}
+json_blacklist = {
+    "birth": "01.01.2000",
+    "last_name": "mollit non id sit",
+    "first_name": "anim",
+    "street": "incididunt id Ut",
+    "phone": "nostrud dolore culpa officia",
+    "patronymic": "dolor veniam officia ad",
+    "passport": "1234 123412",
+    "isTemporalAddress": True,
+    "inn": 47825415,
+    "house": "do dolore veniam",
+    "corps": "cupidatat veniam laborum proident",
+    "city": "ut aute",
+    "building": "do adipisicing velit in",
+    "apartment": "eiusmod ut magna eni"
+}
