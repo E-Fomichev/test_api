@@ -277,7 +277,7 @@ def test_post_vehicles_own_controller_create():
 
 """Reviewer"""
 
-def test_get_vehicles_own_reviewer_index():
+def test_get_vehicles_reviewer_index():
     """Получение списка пользователей с авто по статусам submitted, prepared, accepted, rejected, assembling """
 
     objects = []
@@ -294,3 +294,92 @@ def test_get_vehicles_own_reviewer_index():
     print(req.json())
     print(objects)
 
+def test_get_vehicles_reviewer_count():
+    """Получение количества пользователей по статусам submitted, prepared, accepted, rejected, assembling """
+
+    objects = []
+    headers = {'Authorization': const.auth}
+    params = {'status': 'submitted'}
+    options = 'requests/count'
+
+    req = requests.get(const.base_url + const.vehicles + options,
+                        headers=headers,
+                        params=params)
+    objects.append(req)
+
+    assert 200 == req.status_code
+    print(req.json())
+    print(objects)
+
+def test_post_vehicles_reviewer_reject():
+    """Отклонение заявки автомобиля"""
+
+    objects = []
+    headers = {'Authorization': const.auth}
+    options = 'requests/'
+    options_2 = '/reject'
+    json = json_data.json_reject_car
+
+    req = requests.post(const.base_url + const.vehicles + options + const.vid + options_2,
+                        headers=headers,
+                        json=json)
+    objects.append(req)
+
+    assert 201 == req.status_code
+    print(req.json())
+    print(objects)
+
+def test_post_vehicles_reviewer_prepare():
+    """Подготовка заявки автомобиля"""
+
+    objects = []
+    headers = {'Authorization': const.auth}
+    options = 'requests/'
+    options_2 = '/prepare'
+    json = json_data.json_prepare_car
+
+    req = requests.post(const.base_url + const.vehicles + options + const.vid + options_2,
+                        headers=headers,
+                        json=json)
+    objects.append(req)
+
+    assert 201 == req.status_code
+    print(req.json())
+    print(objects)
+
+def test_post_vehicles_reviewer_accept_prepared():
+    """Подтверждение заявки автомобиля"""
+
+    objects = []
+    headers = {'Authorization': const.auth}
+    options = 'requests/'
+    options_2 = '/accept_prepared'
+
+    req = requests.post(const.base_url + const.vehicles + options + const.vid + options_2,
+                        headers=headers)
+    objects.append(req)
+
+    assert 201 == req.status_code
+    print(req.json())
+    print(objects)
+
+def test_post_vehicles_reviewer_accept():
+    """Подтверждение заявки автомобиля"""
+
+    objects = []
+    headers = {'Authorization': const.auth}
+    options = 'requests/'
+    options_2 = '/accept'
+    json = json_data.json_accept_car
+
+    req = requests.post(const.base_url + const.vehicles + options + const.vid + options_2,
+                        headers=headers,
+                        json=json)
+    objects.append(req)
+
+    assert 201 == req.status_code
+    print(req.json())
+    print(objects)
+
+if __name__ == '__main__':
+    test_get_vehicles_summary_show()
