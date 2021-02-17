@@ -117,60 +117,12 @@ json_odometer = {
 }
 
 json_auto_details = {
-    "year": 2014,
+    "year": 2017,
     "plate": {
         "value": "в666ор77",
         "type": "russia93"
     },
-    "model": "Kalina",
-    "make": "Lada"
+    "model": "A3",
+    "make": "Audi"
 }
 
-json_reject_car = {
-    "reason": "malformed",
-    "comment": "reprehenderit sed mollit dolor"
-}
-
-json_prepare_car = {
-  "type": "russia2020-08-26",
-  "recognized": {
-    "registration": {
-      "vin": "sdfdsf405645604",
-      "registration_number": "р618тр178",
-      "engine_volume": 1799,
-      "engine_power": 125
-    },
-    "plate": {
-      "value": "1231456456",
-      "type": "russia93"
-    }
-  },
-  "comment": "string",
-  "source": "manual"
-}
-
-json_accept_car = {
-  "type": "russia2019",
-  "recognized": {
-    "registration": {
-      "vin": "dfgdfgdfg6504560456",
-      "registration_number": "р618тр178",
-      "engine_volume": 1200,
-      "engine_power": 110
-    },
-    "plate": {
-      "value": "string",
-      "type": "russia93"
-    }
-  },
-  "comment": "string"
-}
-
-json_confirmation = {
-    "username": "0db1cf9a-5b86-4f9f-a062-0cf1ec823990"
-}
-
-json_picture_load = {
-    "collection": "fugiat aliquip in commodo",
-    "key": "laborum officia proident consectetur"
-}
