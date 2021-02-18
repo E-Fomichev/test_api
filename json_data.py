@@ -117,7 +117,7 @@ json_odometer = {
 }
 
 json_auto_details = {
-    "year": 2017,
+    "year": 2015,
     "plate": {
         "value": "в666ор77",
         "type": "russia93"
@@ -125,4 +125,3 @@ json_auto_details = {
     "model": "A3",
     "make": "Audi"
 }
-
