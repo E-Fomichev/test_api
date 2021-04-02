@@ -198,7 +198,7 @@ def test_get_vehicles_own_controller_index():
     """Получение id всех авто по пользователю"""
 
     objects = []
-    headers = {'Authorization': const.auth}
+    headers = {'Authorization': const.token}
     params = {'include': 'all'}
     options = '/own'
 

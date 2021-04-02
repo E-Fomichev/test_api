@@ -96,7 +96,7 @@ def test_post_stables_ownership():
 
     objects = []
     options = 'report/ownership'
-    headers = {'Authorization': const.auth}
+    headers = {'Authorization': const.token}
     json = json_data.json_ownership
 
     req = requests.post(const.base_url + const.stables + options,

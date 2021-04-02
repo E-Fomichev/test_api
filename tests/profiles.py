@@ -8,7 +8,7 @@ def test_post_profiles_confirmation_create():
     """Регистрация пользователя в системе"""
 
     objects = []
-    headers = {'Authorization': const.auth}
+    headers = {'Authorization': const.token}
     options = 'confirmation'
     json = json_data.json_confirmation
 
@@ -26,7 +26,7 @@ def test_get_profiles_details_list():
     """Получение выборки по аккаунтам через continuation, limit"""
 
     objects = []
-    headers = {'Authorization': const.auth}
+    headers = {'Authorization': const.token}
     params = {'continuation': '10', 'limit': '10'}
     options = 'profile'
 
@@ -43,7 +43,7 @@ def test_get_profiles_details_get():
     """Получение данных о профиле"""
 
     objects = []
-    headers = {'Authorization': const.auth}
+    headers = {'Authorization': const.token}
     options = '/profile/details'
 
     req = requests.get(const.base_url + const.profiles + const.uid + options,
@@ -58,7 +58,7 @@ def test_post_profiles_details_picture_load():
     """Загрузка аватара"""
 
     objects = []
-    headers = {'Authorization': const.auth}
+    headers = {'Authorization': const.token}
     options = '/profile/picture'
     json = json_data.json_picture_load
 
